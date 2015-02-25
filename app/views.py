@@ -17,7 +17,7 @@ def index():
         "LASER in laser therapy, which is a form of cancer treatment, stands for light amplification by stimulated emission of radiation",
         "The top 5 most common cancers among men and women are: 1.Lung 2.Breast 3.Colorectal 4.Prostate and 5.Stomach",
         "The number of new cases of cancer is expected to increase by 70 percent over the next 20 years (WHO)",
-        "Toboacco use is the most important risk factor for cancer causing around 20 percent of global cancer deaths and around 70 percent of global lung cancer deaths (WHO)",
+        "Tobacco use is the most important risk factor for cancer causing around 20 percent of global cancer deaths and around 70 percent of global lung cancer deaths (WHO)",
         "Cancer can originate almost anywhere in the body",
         "Specific cancers can be more prevalent in different areas. For example, Japan has a high frequency of stomach cancer",
         "Studies have suggested that the risk of developing some kinds of cancers (i.e. colon, stomach) is not determined by heredity.",
