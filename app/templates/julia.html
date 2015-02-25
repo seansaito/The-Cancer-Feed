@@ -1,0 +1,28 @@
+<div class="grid">
+    <figure class="effect-julia">
+        <img src= "{{ article[0]['img'] }}"/>
+        <figcaption>
+        <h2>{{ article[0]["title"] }}</h2>
+        <div>
+            <p>{{ article[0]["subtitle"][0] }}</p>
+            <p>{{ article[0]["subtitle"][1] }}</p>
+            <p>{{ article[0]["subtitle"][2] }}</p>
+        </div>
+        <a href="{{ article[0]['link'] }}">Go to Article</a>
+        </figcaption>
+    </figure>
+    {% if article[1] %}
+    <figure class="effect-julia">
+        <img src= "{{ article[1]['img'] }}"/>
+        <figcaption>
+        <h2>{{ article[1]["title"] }}</h2>
+        <div>
+            <p>{{ article[1]["subtitle"][0] }}</p>
+            <p>{{ article[1]["subtitle"][1] }}</p>
+            <p>{{ article[1]["subtitle"][2] }}</p>
+        </div>
+        <a href="{{ article[1]['link'] }}">Go to Article</a>
+        </figcaption>
+    </figure>
+    {% endif %}
+</div>

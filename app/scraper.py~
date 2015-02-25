@@ -1,0 +1,41 @@
+import requests
+import bs4
+from multiprocessing import Pool
+import re
+
+medical_news_root = "http://www.medicalnewstoday.com"
+medical_news_cancer = "/categories/cancer-oncology"
+
+def mnr_get_img_page_urls(soup):
+    imgs = [a.attrs.get("src") for a in soup.select("div.headlines_split img[src^=content]")]
+    return imgs
+
+def mnr_get_titles(soup):
+    titles = [a.get_text() for a in soup.select("div.headlines_split strong")]
+    return titles
+
+def mnr_get_subtitles(soup):
+    subtitles = [a.get_text() for a in soup.select("div.headlines_split em")]
+    return subtitles
+
+def mnr_get_links(soup):
+    links = [a.attrs.get("href") for a in soup.select("div.headlines_split a[href^=/articles]")]
+    return links
+
+def get_mnr_articles():
+    reponse = requests.get(medical_news_root + medical_news_cancer)
+    soup = bs4.BeautifulSoup(response.text)
+    imgs = mnr_get_img_page_urls(soup)
+    titles = mnr_get_titles(soup)
+    subtitles = mnr_get_subtitles(soup)
+    links = mnr_get_links(soup)
+    result = []
+    for i in range(0, len(imgs)):
+        article = {}
+        article["img"] = medical_news_root + imgs[i]
+        article["title"] = titles[i]
+        article["subtitle"] = subtitles[i]
+        article["link"] = medical_news_root + links[i]
+        result.append(article)
+    return result
+

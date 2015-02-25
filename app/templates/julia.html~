@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="grid">
+    <figure class="effect-julia">
+        <img src= "{{ article1['img'] }}"/>
+        <figcaption>
+        <h2>{{ article1["title"] }}</h2>
+        <div>
+            <p>{{ article1["subtitles"][0] }}</p>
+            <p>{{ article1["subtitles"][1] }}</p>
+            <p>{{ article1["sutbtiles"][2] }}</p>
+        </div>
+        <a href="{{ article['link'] }}">Go to Article</a>
+        </figcaption>
+    </figure>
+    <figure class="effect-julia">
+        <img src= "{{ article2['img'] }}"/>
+        <figcaption>
+        <h2>{{ article2["title"] }}</h2>
+        <div>
+            <p>{{ article2["subtitles"][0] }}</p>
+            <p>{{ article2["subtitles"][1] }}</p>
+            <p>{{ article2["subtitles"][2] }}</p>
+        </div>
+        <a href="{{ article2['link'] }}">Go to Article</a>
+        </figcaption>
+    </figure>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+[global]
+ApplicationName=cancer-feed
+AwsCredentialFile=C:\Users\SeanSaito\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.ap-southeast-1.amazonaws.com
+EnvironmentName=flask
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=SingleInstance
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\Users\SeanSaito\dev\cancer-feed\.elasticbeanstalk\optionsettings.flask
+RdsEnabled=No
+Region=ap-southeast-1
+ServiceEndpoint=https://elasticbeanstalk.ap-southeast-1.amazonaws.com
+SolutionStack=32bit Amazon Linux 2014.09 v1.2.0 running Python 2.7
+

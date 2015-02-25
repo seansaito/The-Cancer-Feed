@@ -1,0 +1,36 @@
+from flask import render_template, redirect, url_for, request
+from app import app, mail
+from flask.ext.mail import Message
+from scraper import get_mnr_articles, get_gov_articles, get_research_articles
+
+@app.route("/", methods = ["GET", "POST"])
+@app.route("/index", methods=["GET", "POST"])
+def index():
+    mnr_articles = get_mnr_articles()
+    gov_articles = get_gov_articles()
+    research_articles = get_research_articles()
+    return render_template("index.html",
+            mnr_articles=mnr_articles, gov_articles=gov_articles,
+            research_articles=research_articles)
+
+@app.route("/resources", methods = ["GET", "POST"])
+def resources():
+    return render_template("resources.html")
+
+@app.route("/feedback", methods=["GET", "POST"])
+def feedback():
+    return render_template("feedback.html")
+
+@app.route("/videos", methods=["GET", "POST"])
+def videos():
+    return render_template("videos.html")
+
+@app.route("/feedback_answer", methods-=["GET", "POST"])
+def feedback_answer():
+    q1 = request.form["q1"]
+    q2 = request.form["q2"]
+    q3 = request.form["q3"]
+    q4 = request.form["q4"]
+    q5 = request.form["q5"]
+    q6 = request.form["q6"]
+    

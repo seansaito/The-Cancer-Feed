@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cancer Feed</title>
+		<meta name="keywords" content="hover effect, inspiration, grid, thumbnail, transition, subtle, web design" />
+		<meta name="author" content="Sean Saito" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/set2.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+  </head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>The Cancer Feed<span>Your go-to portal for learning about cancer</span></h1>
+				<nav class="codrops-demos">
+					<a href="{{ url_for('index') }}">News</a>
+					<a class="current-demo" href="{{ url_for('resources') }}">Resources</a>
+					<a href="{{ url_for('feedback') }}">Feedback</a>
+				</nav>
+			</header>
+			<div class="content">
+        <h2>Watch More</h2>
+				<div class="grid">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/PwqY99gNipE" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gFuEo2ccTPA" frameborder="0" allowfullscreen></iframe>
+				</div>
+        <div class="grid">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-NNjDjXSJt0" frameborder="0" allowfullscreen></iframe>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/kYmLQP2M-qo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="grid">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/aEi_4Cyx4Uw" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ryhSGUzzz8U" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="grid">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SGaQ0WwZ_0I" frameborder="0" allowfullscreen></iframe>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/wVU0uIPek9U" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="grid">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/tMKlPDBRJ1E" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/axN0xdhznhY?list=PLc8e2NNCopVtxT7XJXz7bYcUUrLW0JVb4" frameborder="0" allowfullscreen></iframe>
+        </div>
+			</div>
+      <section class="related">
+        <p>Created by Sean Saito for Foundations of Science II.</p>
+        <p>Special Thanks to Professor Melissa Fullwood</p>
+      </section>
+		</div><!-- /container -->
+    <script>
+			// For Demo purposes only (show hover effect on mobile devices)
+			[].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+				el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+			} );
+		</script>
+	</body>
+</html>
