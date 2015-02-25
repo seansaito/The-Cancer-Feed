@@ -31,7 +31,8 @@ def index():
         "There are more than 100 types of 'cancer'",
         "Leading a healthy lifestyle is often the best way to prevent cancer"
     ]
-    funfact = funfacts[randint(0, len(funfacts)-1)]
+    fact = randint(0, len(funfacts) - 1)
+    funfact = funfacts[fact]
     return render_template("index.html",
             mnr_articles=mnr_articles, gov_articles=gov_articles,
             research_articles=research_articles, funfact=funfact)
