@@ -1,5 +1,6 @@
 [global]
 ApplicationName=cancer-feed
+ApplicationVersionName=git-5a8883bee59f31095a0b3c376b7b6ec62a039631-1424857258066
 AwsCredentialFile=C:\Users\SeanSaito\.elasticbeanstalk\aws_credential_file
 DevToolsEndpoint=git.elasticbeanstalk.ap-southeast-1.amazonaws.com
 EnvironmentName=flask
