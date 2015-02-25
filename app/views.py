@@ -3,7 +3,7 @@ from app import application, mail
 from flask.ext.mail import Message
 from config import ADMINS
 from scraper import get_mnr_articles, get_gov_articles, get_research_articles
-from random import randrange
+from random import randint
 
 @application.route("/", methods = ["GET", "POST"])
 @application.route("/index", methods=["GET", "POST"])
@@ -31,7 +31,7 @@ def index():
         "There are more than 100 types of 'cancer'",
         "Leading a healthy lifestyle is often the best way to prevent cancer"
     ]
-    funfact = funfacts[randrange(0, len(funfacts)-1)]
+    funfact = funfacts[randint(0, len(funfacts)-1)]
     return render_template("index.html",
             mnr_articles=mnr_articles, gov_articles=gov_articles,
             research_articles=research_articles, funfact=funfact)
