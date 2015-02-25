@@ -3,9 +3,7 @@ from flask.ext.mail import Mail
 
 application = Flask(__name__)
 
-app = application
-
-app.config.update(dict(
+application.config.update(dict(
     MAIL_SERVER = "smtp.googlemail.com",
     MAIL_PORT = 465,
     MAIL_USE_TLS = False,
@@ -14,6 +12,6 @@ app.config.update(dict(
     MAIL_PASSWORD = "bancho138614",
 ))
 
-mail = Mail(app)
+mail = Mail(application)
 
 from app import views

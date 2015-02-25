@@ -14,4 +14,4 @@ application.config.update(dict(
 
 mail = Mail(application)
 
-from app import views
+from application import views

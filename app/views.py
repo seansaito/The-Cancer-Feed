@@ -1,12 +1,12 @@
 from flask import render_template, redirect, url_for, request
-from app import app, mail
+from app import application, mail
 from flask.ext.mail import Message
 from config import ADMINS
 from scraper import get_mnr_articles, get_gov_articles, get_research_articles
 from random import randrange
 
-@app.route("/", methods = ["GET", "POST"])
-@app.route("/index", methods=["GET", "POST"])
+@application.route("/", methods = ["GET", "POST"])
+@application.route("/index", methods=["GET", "POST"])
 def index():
     mnr_articles = get_mnr_articles()
     gov_articles = get_gov_articles()
@@ -36,19 +36,19 @@ def index():
             mnr_articles=mnr_articles, gov_articles=gov_articles,
             research_articles=research_articles, funfact=funfact)
 
-@app.route("/resources", methods = ["GET", "POST"])
+@application.route("/resources", methods = ["GET", "POST"])
 def resources():
     return render_template("resources.html")
 
-@app.route("/feedback", methods=["GET", "POST"])
+@application.route("/feedback", methods=["GET", "POST"])
 def feedback():
     return render_template("feedback.html")
 
-@app.route("/videos", methods=["GET", "POST"])
+@application.route("/videos", methods=["GET", "POST"])
 def videos():
     return render_template("videos.html")
 
-@app.route("/feedback_answer", methods=["POST"])
+@application.route("/feedback_answer", methods=["POST"])
 def feedback_answer():
     q1 = request.form["q1"]
     q2 = request.form["q2"]
@@ -63,7 +63,7 @@ def feedback_answer():
         return redirect(url_for("prize"))
     return redirect(url_for("index"))
 
-@app.route("/prize")
+@application.route("/prize")
 def prize():
     return render_template("prize.html")
 

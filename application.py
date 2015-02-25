@@ -2,9 +2,9 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from flask.ext.script import Manager, Server
-from app import app
+from app import application
 
-manager = Manager(app)
+manager = Manager(application)
 
 manager.add_command("runserver", Server(
     use_debugger = True,
@@ -13,5 +13,5 @@ manager.add_command("runserver", Server(
 )
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    application.run(host="0.0.0.0")
 
