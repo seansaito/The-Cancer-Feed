@@ -1,7 +1,9 @@
 from flask import Flask
 from flask.ext.mail import Mail
 
-app = Flask(__name__)
+application = Flask(__name__)
+
+app = application
 
 app.config.update(dict(
     MAIL_SERVER = "smtp.googlemail.com",
@@ -13,8 +15,5 @@ app.config.update(dict(
 ))
 
 mail = Mail(app)
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")
 
 from app import views
