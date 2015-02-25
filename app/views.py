@@ -69,5 +69,5 @@ def prize():
 
 def send_email(msg, body):
     msg.html = body
-    with app.app_context():
+    with application.app_context():
         mail.send(msg)
