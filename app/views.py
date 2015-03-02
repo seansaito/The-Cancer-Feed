@@ -35,8 +35,12 @@ websites = [
 ]
 
 @application.route("/", methods = ["GET", "POST"])
-@application.route("/index", methods=["GET", "POST"])
-def index():
+@application.route("/about")
+def about():
+    return render_template("about.html")
+
+@application.route("/news", methods=["GET", "POST"])
+def news():
     mnr_articles = get_mnr_articles()
     gov_articles = get_gov_articles()
     research_articles = get_research_articles()
@@ -62,7 +66,7 @@ def index():
     ]
     fact = randint(0, len(funfacts) - 1)
     funfact = funfacts[fact]
-    return render_template("index.html",
+    return render_template("news.html",
             mnr_articles=mnr_articles, gov_articles=gov_articles,
             research_articles=research_articles, funfact=funfact)
 

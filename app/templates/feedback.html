@@ -20,10 +20,11 @@
       <header class="codrops-header">
         <h1>The Cancer Feed<span>Your go-to portal for learning about cancer</span></h1>
         <nav class="codrops-demos">
-          <a href="{{ url_for('index') }}">News</a>
-          <a href="{{ url_for('resources') }}">Resources</a>
+					<a href="{{ url_for('about')}}">About</a>
+          <a href="{{ url_for('news') }}">News</a>
+          <a href="{{ url_for('videos') }}">Resources</a>
           <a class="current-demo" href="{{ url_for('feedback') }}">Feedback</a>
-					<a href="{{ url_for('learn') }}">Learn</a>
+					<a href="{{ url_for('learn') }}" target="_blank">Learn</a>
         </nav>
       </header>
 			<section>
