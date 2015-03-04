@@ -1,0 +1,6 @@
+# The-Cancer-Feed
+The Cancer Feed is a portal for learning about cancer.
+
+It uses Beautiful Soup for scraping the latest articles about cancer research from trustworthy institutions such as Cancer Research UK and The National Cancer Institute.
+
+More about the Cancer Feed is available on the About page.
